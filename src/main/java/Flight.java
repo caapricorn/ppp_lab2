@@ -29,6 +29,6 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "\n"
+        return "\nDEST_AEROPORT_ID=" + getDEST_AEROPORT_ID() + "::ARR_DELAY=" + getARR_DELAY() + "::ARR_DELAY_NEW=" + getARR_DELAY_NEW();
     }
 }
