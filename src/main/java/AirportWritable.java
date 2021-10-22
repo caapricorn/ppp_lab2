@@ -14,10 +14,11 @@ public class AirportWritable {
         int index = 0;
         List<Airport> airportList = new ArrayList<>();
         reader.readLine();
+        char dm = (char) 34;
         while ((line = reader.readLine()) != null) {
             Airport airport = new Airport();
             scanner = new Scanner(line);
-            scanner.useDelimiter(",");
+            scanner.useDelimiter(dm + "," + dm);
             while (scanner.hasNext()) {
                 String data = scanner.next();
                 data = data.substring(1, data.length() - 1);
