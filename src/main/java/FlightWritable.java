@@ -24,7 +24,6 @@ public class FlightWritable {
                 if (index == 14 && !Objects.equals(data, "")) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
                 else if (index == 17 && !Objects.equals(data, "")) flight.setARR_DELAY(Double.parseDouble(data));
                 else if (index == 18 && !Objects.equals(data, "")) flight.setARR_DELAY_NEW(Double.parseDouble(data));
-                //else System.out.println("Некорректные данные::" + data);
                 index++;
             }
             index = 0;
