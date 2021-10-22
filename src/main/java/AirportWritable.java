@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AirportWritable {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("L_AIRPORT.csv"));
+        BufferedReader reader = new BufferedReader(new FileReader("/home/caapricorn/ppp_lab2/L_AIRPORT.csv"));
         String line = null;
         Scanner scanner = null;
         int index = 0;
