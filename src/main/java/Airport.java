@@ -1,4 +1,4 @@
 public class Airport {
     private String code;
-    private String destination;
+    private String description;
 }
