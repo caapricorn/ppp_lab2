@@ -14,15 +14,13 @@ public class FlightWritable {
         int index = 0;
         List<Flight> flightList = new ArrayList<>();
         reader.readLine();
-        char dm = (char) 34;
         while ((line = reader.readLine()) != null) {
             Flight flight = new Flight();
             scanner = new Scanner(line);
-            scanner.useDelimiter(dm + "," + dm);
+            scanner.useDelimiter(",");
             while (scanner.hasNext()) {
                 String data = scanner.next();
-                data = data.substring(1, data.length() - 1);
-                if (index == 15) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
+                if (index == 14) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
                 else if (index == 1) airport.setDescription(data);
                 else System.out.println("Некорректные данные::" + data);
                 index++;

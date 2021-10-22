@@ -1,13 +1,13 @@
 public class Flight {
-    private String DEST_AEROPORT_ID;
+    private int DEST_AEROPORT_ID;
     private int ARR_DELAY;
     private int ARR_DELAY_NEW;
 
-    public String getDEST_AEROPORT_ID() {
+    public int getDEST_AEROPORT_ID() {
         return DEST_AEROPORT_ID;
     }
 
-    public void setDEST_AEROPORT_ID(String DEST_AEROPORT_ID) {
+    public void setDEST_AEROPORT_ID(int DEST_AEROPORT_ID) {
         this.DEST_AEROPORT_ID = DEST_AEROPORT_ID;
     }
 
