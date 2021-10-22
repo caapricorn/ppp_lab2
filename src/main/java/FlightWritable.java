@@ -21,7 +21,7 @@ public class FlightWritable {
             while (scanner.hasNext()) {
                 String data = scanner.next();
                 if (index == 14) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
-                else if (index == 1) airport.setDescription(data);
+                else if (index == 17) flight.setARR_DELAY(data);
                 else System.out.println("Некорректные данные::" + data);
                 index++;
             }
