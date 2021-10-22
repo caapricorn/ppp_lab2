@@ -20,6 +20,6 @@ public class Airport {
 
     @Override
     public String toString() {
-        return "\n"
+        return "\nCode=" + getCode() + "::Description=" + getDescription()
     }
 }
