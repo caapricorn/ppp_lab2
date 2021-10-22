@@ -21,14 +21,15 @@ public class FlightWritable {
             while (scanner.hasNext()) {
                 String data = scanner.next();
                 if (index == 14) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
-                else if (index == 17) flight.setARR_DELAY(data);
+                else if (index == 17) flight.setARR_DELAY(Double.parseDouble(data));
+                else if (index == 18) flight.setARR_DELAY_NEW(Double.parseDouble(data));
                 else System.out.println("Некорректные данные::" + data);
                 index++;
             }
             index = 0;
-            airportList.add(airport);
+            flightList.add(flight);
         }
         reader.close();
-        System.out.println(airportList);
+        System.out.println(flightList);
     }
 }
