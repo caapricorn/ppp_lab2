@@ -1,6 +1,6 @@
 public class Flight {
     private int DEST_AEROPORT_ID;
-    private int ARR_DELAY;
+    private double ARR_DELAY;
     private int ARR_DELAY_NEW;
 
     public int getDEST_AEROPORT_ID() {
