@@ -17,7 +17,7 @@ public class AirportWritable {
         while ((line = reader.readLine()) != null) {
             Airport airport = new Airport();
             scanner = new Scanner(line);
-            scanner.useDelimiter(",");
+            scanner.useDelimiter(", ");
             while (scanner.hasNext()) {
                 String data = scanner.next();
                 data = data.substring(1, data.length() - 1);
