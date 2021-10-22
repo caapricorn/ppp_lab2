@@ -13,6 +13,7 @@ public class AirportWritable {
         Scanner scanner = null;
         int index = 0;
         List<Airport> airportList = new ArrayList<>();
+        reader.readLine();
         while ((line = reader.readLine()) != null) {
             Airport airport = new Airport();
             scanner = new Scanner(line);
