@@ -19,8 +19,15 @@ public class AirportWritable {
             scanner.useDelimiter(",");
             while (scanner.hasNext()) {
                 String data = scanner.next();
-                if (index == 0) airport.setCode();
+                if (index == 0) airport.setCode(Integer.parseInt(data));
+                else if (index == 1) airport.setDescription(data);
+                else System.out.println("Некорректные данные::" + data);
+                index++;
             }
+            index = 0;
+            airportList.add(airport);
         }
+        reader.close();
+        System.out.println(airportList);
     }
 }
