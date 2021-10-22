@@ -21,9 +21,14 @@ public class AirportWritable {
             scanner.useDelimiter(dm + "," + dm);
             while (scanner.hasNext()) {
                 String data = scanner.next();
-                data = data.substring(1, data.length() - 1);
-                if (index == 0) airport.setCode(Integer.parseInt(data));
-                else if (index == 1) airport.setDescription(data);
+                if (index == 0) {
+                    data = data.substring(1);
+                    airport.setCode(Integer.parseInt(data));
+                }
+                else if (index == 1) {
+                    data = data.substring(0, data.length() - 1);
+                    airport.setDescription(data);
+                }
                 else System.out.println("Некорректные данные::" + data);
                 index++;
             }

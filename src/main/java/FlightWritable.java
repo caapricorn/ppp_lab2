@@ -12,17 +12,17 @@ public class FlightWritable {
         String line = null;
         Scanner scanner = null;
         int index = 0;
-        List<Airport> airportList = new ArrayList<>();
+        List<Flight> flightList = new ArrayList<>();
         reader.readLine();
         char dm = (char) 34;
         while ((line = reader.readLine()) != null) {
-            Airport airport = new Airport();
+            Flight flight = new Flight();
             scanner = new Scanner(line);
             scanner.useDelimiter(dm + "," + dm);
             while (scanner.hasNext()) {
                 String data = scanner.next();
                 data = data.substring(1, data.length() - 1);
-                if (index == 0) airport.setCode(Integer.parseInt(data));
+                if (index == 15) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
                 else if (index == 1) airport.setDescription(data);
                 else System.out.println("Некорректные данные::" + data);
                 index++;
