@@ -20,9 +20,9 @@ public class FlightWritable {
             scanner.useDelimiter(",");
             while (scanner.hasNext()) {
                 String data = scanner.next();
-                if (index == 14) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
-                else if (index == 17) flight.setARR_DELAY(Double.parseDouble(data));
-                else if (index == 18) flight.setARR_DELAY_NEW(Double.parseDouble(data));
+                if (index == 14 && data != null) flight.setDEST_AEROPORT_ID(Integer.parseInt(data));
+                else if (index == 17 && data != null) flight.setARR_DELAY(Double.parseDouble(data));
+                else if (index == 18 && data != null) flight.setARR_DELAY_NEW(Double.parseDouble(data));
                 //else System.out.println("Некорректные данные::" + data);
                 index++;
             }
