@@ -19,7 +19,7 @@ public class AirportWritable {
             scanner.useDelimiter(",");
             while (scanner.hasNext()) {
                 String data = scanner.next();
-                if (index == 0) airport.
+                if (index == 0) airport.setCode();
             }
         }
     }
