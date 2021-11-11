@@ -27,8 +27,8 @@ public class Airport {
     int count = 0;
     String[] list = new String[2];
     count = csv.indexOf(",");
-    list[0] = csv.substring(0, count).replaceAll();
-    list[1] = csv.substring(count + 1);
+    list[0] = csv.substring(0, count).replaceAll("\"", "");
+    list[1] = csv.substring(count + 1).replaceAll("\"", "");
     }
 
 //    @Override
