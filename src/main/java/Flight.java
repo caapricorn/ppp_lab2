@@ -43,11 +43,12 @@ public class Flight {
         list[0] = csv.substring(0, count);
         for (int i = 0; i < 3; i++) {
             int cnt = csv.indexOf(",");
-            csv = csv.substring(count + 1);
+            csv = csv.substring(cnt + 1);
         }
-        list[1] = csv.substring(0, count);
         count = csv.indexOf(",");
+        list[1] = csv.substring(0, count);
         csv = csv.substring(count + 1);
+        count = csv.indexOf(",");
         list[2] = csv.substring(0, count);
     }
 
