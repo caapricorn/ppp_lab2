@@ -9,6 +9,8 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
             IOException, InterruptedException {
         //long count=0;
         Iterator<Text> iter = values.iterator();
+        Text airport_name = new Text("Airport name: " + iter.next().toString());
+        
 //        while(iter.hasNext()) {
 //            iter.next();
 //            count++;
