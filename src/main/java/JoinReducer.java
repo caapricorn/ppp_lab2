@@ -7,7 +7,6 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
     @Override
     protected void reduce(JoinWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
-        //long count=0;
         Iterator<Text> iter = values.iterator();
         Text airport_name = new Text("Airport name: " + iter.next().toString());
         float sum = 0;
@@ -15,8 +14,13 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         float min = Float.MAX_VALUE;
         while(iter.hasNext()) {
             float delay = Float.parseFloat(iter.next().toString());
-            
+            max = Math.max(max, delay);
+            min = Math.min(min, delay);
+            sum += delay;
         }
-        context.write(key, new LongWritable(count));
+        context.write(
+                key,
+                new LongWritable(count)
+        );
     }
 }
