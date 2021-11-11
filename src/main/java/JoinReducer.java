@@ -10,11 +10,11 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         //long count=0;
         Iterator<Text> iter = values.iterator();
         Text airport_name = new Text("Airport name: " + iter.next().toString());
-        
-//        while(iter.hasNext()) {
-//            iter.next();
-//            count++;
-//        }
+        float sum = 0;
+        while(iter.hasNext()) {
+            iter.next();
+            count++;
+        }
         context.write(key, new LongWritable(count));
     }
 }
