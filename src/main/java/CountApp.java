@@ -20,11 +20,18 @@ public class CountApp {
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightMapper.class);
 
+        job.setGroupingComparatorClass(JoinComparator.class);
+        job.setPartitionerClass(AirportPartitioner.class);
+        job.setReducerClass(JoinReducer.class);
+
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setReducerClass(JoinReducer.class);
-        //job.setOutputKeyClass(Text.class);
-        //job.setOutputValueClass(IntWritable.class);
+        
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+
         job.setNumReduceTasks(2);
+
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
