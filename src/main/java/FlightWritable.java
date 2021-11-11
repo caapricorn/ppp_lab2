@@ -13,7 +13,7 @@ public class FlightWritable {
         String line = null;
         Scanner scanner = null;
         int index = 0;
-        List<Flight> flightList = new ArrayList<>();   
+        List<Flight> flightList = new ArrayList<>();
         reader.readLine();
         while ((line = reader.readLine()) != null) {
             Flight flight = new Flight();
