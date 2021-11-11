@@ -1,12 +1,12 @@
 public class Flight {
     private int DEST_AEROPORT_ID;
     private double ARR_DELAY;
-    private double ARR_DELAY_NEW;
+    //private double ARR_DELAY_NEW;
 
-    Flight(int DEST_AEROPORT_ID, double ARR_DELAY, double ARR_DELAY_NEW) {
+    Flight(int DEST_AEROPORT_ID, double ARR_DELAY) {
         this.DEST_AEROPORT_ID = DEST_AEROPORT_ID;
         this.ARR_DELAY = ARR_DELAY;
-        this.ARR_DELAY_NEW = ARR_DELAY_NEW;
+       // this.ARR_DELAY_NEW = ARR_DELAY_NEW;
     }
 
     public int getDEST_AEROPORT_ID() {
@@ -25,16 +25,16 @@ public class Flight {
     //    this.ARR_DELAY = ARR_DELAY;
     //}
 
-    public double getARR_DELAY_NEW() {
-        return ARR_DELAY_NEW;
-    }
+    //public double getARR_DELAY_NEW() {
+    //    return ARR_DELAY_NEW;
+    //}
 
     //public void setARR_DELAY_NEW(double ARR_DELAY_NEW) {
     //    this.ARR_DELAY_NEW = ARR_DELAY_NEW;
     //}
 
     public static Flight parse(String csv) {
-        String[] list = new String[3];
+        String[] list = new String[2];
         for (int i = 0; i < 14; i++) {
             int count = csv.indexOf(",");
             csv = csv.substring(count + 1);
@@ -49,10 +49,10 @@ public class Flight {
         list[1] = csv.substring(0, count);
         csv = csv.substring(count + 1);
         count = csv.indexOf(",");
-        list[2] = csv.substring(0, count);
+        //list[2] = csv.substring(0, count);
         if (list[1].length() == 0) list[1] = "0";
-        if (list[2].length() == 0) list[2] = "0";
-        return new Flight(Integer.parseInt(list[0]), Float.parseFloat(list[1]), Float.parseFloat(list[2]));
+        //if (list[2].length() == 0) list[2] = "0";
+        return new Flight(Integer.parseInt(list[0]), Float.parseFloat(list[1]));
     }
 
 //    @Override
