@@ -26,7 +26,10 @@ public class CountApp {
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setReducerClass(JoinReducer.class);
-        
+
+        job.setMapOutputKeyClass(JoinWritableComparable.class);
+        job.setMapOutputValueClass(Text.class);
+
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
 
