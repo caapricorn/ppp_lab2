@@ -35,6 +35,12 @@ public class Flight {
 
     public static Flight parse(String csv) {
         String[] list = new String[3];
+        for (int i = 0; i < 14; i++) {
+            int count = csv.indexOf(",");
+            csv = csv.substring(count + 1);
+        }
+        int count = csv.indexOf(",");
+        list[0] = csv.substring(0, count);
     }
 
 //    @Override
