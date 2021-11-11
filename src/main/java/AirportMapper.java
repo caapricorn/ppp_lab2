@@ -13,7 +13,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, IntWritable>
             Airport airport = Airport.parse(line);
             //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
 
-            context.write(new Text(word), new IntWritable(1));
+            context.write(
+                    new Text(word), new IntWritable(1));
         }
     }
 }
