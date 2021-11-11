@@ -26,4 +26,10 @@ public class JoinWritableComparable implements WritableComparable<JoinWritableCo
         indicator = input.readBoolean();
     }
 
+    @Override
+    public void write(DataOutput output) throws IOException {
+        output.writeInt(airportId);
+        output.writeBoolean(indicator);
+    }
+
 }
