@@ -8,6 +8,8 @@ public class JoinComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
-        
+        JoinWritableComparable o1 = (JoinWritableComparable) a;
+        JoinWritableComparable o2 = (JoinWritableComparable) b;
+        return 
     }
 }
