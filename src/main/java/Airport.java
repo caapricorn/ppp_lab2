@@ -2,6 +2,11 @@ public class Airport {
     private int code;
     private String description;
 
+    Airport(int code, String description) {
+        this.code = code;
+        this.description = description;
+    }
+
     public int getCode() {
         return code;
     }
