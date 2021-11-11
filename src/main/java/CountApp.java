@@ -16,7 +16,7 @@ public class CountApp {
         job.setJarByClass(CountApp.class);
         job.setJobName("Count App");
 
-        MultipleInputs.addInputPath();
+        MultipleInputs.addInputPath(job, new Path());
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         //job.setMapperClass(WordMapper.class);
