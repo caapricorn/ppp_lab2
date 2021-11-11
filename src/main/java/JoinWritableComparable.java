@@ -34,7 +34,7 @@ public class JoinWritableComparable implements WritableComparable<JoinWritableCo
 
     @Override
     public int compareTo(JoinWritableComparable a) {
-        if (this.airportId - a.airportId == 0) return 0;
-        else if ()
+        if (this.airportId - a.airportId != 0) return this.airportId - a.airportId;
+        if ()
     }
 }
