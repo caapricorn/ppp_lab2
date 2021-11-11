@@ -15,7 +15,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinWritableCompar
 
             context.write(
                     new JoinWritableComparable(airport.getCode(), false),
-                    new Text(airport.getDescription()
+                    new Text(airport.getDescription())
+            );
         }
     }
 }
