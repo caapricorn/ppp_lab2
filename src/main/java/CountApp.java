@@ -7,12 +7,12 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class CountApp {
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.err.println("Usage: CountApp <input path> <output path>");
+        if (args.length != 3) {
+            System.err.println("Usage: CountApp <airport> <flight> <output>");
             System.exit(-1);
         }
         Job job = Job.getInstance();
-        //job.setJarByClass(WordCountApp.class);
+        job.setJarByClass(CountApp.class);
         //job.setJobName("Word count");
         //FileInputFormat.addInputPath(job, new Path(args[0]));
         //FileOutputFormat.setOutputPath(job, new Path(args[1]));
