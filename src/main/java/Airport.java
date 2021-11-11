@@ -23,8 +23,12 @@ public class Airport {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "\nCode=" + getCode() + "::Description=" + getDescription();
+    public static Airport parse(String csv) {
+
     }
+
+//    @Override
+//    public String toString() {
+//        return "\nCode=" + getCode() + "::Description=" + getDescription();
+//    }
 }
