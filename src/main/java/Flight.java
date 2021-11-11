@@ -37,10 +37,18 @@ public class Flight {
         String[] list = new String[3];
         for (int i = 0; i < 14; i++) {
             int count = csv.indexOf(",");
-            csv = csv.substring(count + 1);
+            csv = csv.substring(0, count + 1);
         }
         int count = csv.indexOf(",");
         list[0] = csv.substring(0, count);
+        for (int i = 0; i < 3; i++) {
+            int cnt = csv.indexOf(",");
+            csv = csv.substring(0, count + 1);
+        }
+        list[1] = csv.substring(0, count);
+        count = csv.indexOf(",");
+        csv = csv.substring(0, count + 1);
+        list[2] = csv.substring(0, count);
     }
 
 //    @Override
