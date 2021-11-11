@@ -22,7 +22,8 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         }
         context.write(
                 airport_name,
-                new Text("Average: " + )
+                new Text("Average: " + sum / count +
+                        )
         );
     }
 }
