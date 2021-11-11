@@ -4,5 +4,5 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class JoinWritableComparable implements WritableComparable<JoinWritableComparable>{
-
+    
 }
