@@ -7,12 +7,12 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
     @Override
     protected void reduce(JoinWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
-        long count=0;
+        //long count=0;
         Iterator iter = values.iterator();
-        while(iter.hasNext()) {
-            iter.next();
-            count++;
-        }
+//        while(iter.hasNext()) {
+//            iter.next();
+//            count++;
+//        }
         context.write(key, new LongWritable(count));
     }
 }
