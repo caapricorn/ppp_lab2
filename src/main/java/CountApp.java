@@ -4,6 +4,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class CountApp {
@@ -16,7 +17,7 @@ public class CountApp {
         job.setJarByClass(CountApp.class);
         job.setJobName("Count App");
 
-        MultipleInputs.addInputPath(job, new Path());
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         //job.setMapperClass(WordMapper.class);
