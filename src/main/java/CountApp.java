@@ -19,12 +19,10 @@ public class CountApp {
 
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightMapper.class);
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
         job.setGroupingComparatorClass(JoinComparator.class);
         job.setPartitionerClass(AirportPartitioner.class);
-        job.setReducerClass(JoinReducer.class);
-
-        FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setReducerClass(JoinReducer.class);
 
         job.setMapOutputKeyClass(JoinWritableComparable.class);
