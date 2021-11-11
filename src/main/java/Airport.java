@@ -25,6 +25,7 @@ public class Airport {
 
     public static Airport parse(String csv) {
     int count = 0;
+    String [] list;
     count = csv.indexOf(",");
     }
 
