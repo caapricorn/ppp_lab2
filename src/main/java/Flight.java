@@ -39,14 +39,7 @@ public class Flight {
         list[1] = csv.substring(0, count);
         csv = csv.substring(count + 1);
         count = csv.indexOf(",");
-        //list[2] = csv.substring(0, count);
         if (list[1].length() == 0) list[1] = "0";
-        //if (list[2].length() == 0) list[2] = "0";
         return new Flight(Integer.parseInt(list[0]), Float.parseFloat(list[1]));
     }
-
-//    @Override
-//    public String toString() {
-//        return "\nDEST_AEROPORT_ID=" + getDEST_AEROPORT_ID() + "::ARR_DELAY=" + getARR_DELAY() + "::ARR_DELAY_NEW=" + getARR_DELAY_NEW();
-//    }
 }
