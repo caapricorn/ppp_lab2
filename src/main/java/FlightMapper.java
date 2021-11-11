@@ -9,9 +9,10 @@ public class FlightMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String line = value.toString();
-        String[] words = line.split("[\\p{Punct}\\p{Space}—]");
-        for (String word : words) {
-            context.write(new Text(word), new IntWritable(1));
-        }
+        Flight flight = Flight.parse(line);
+        //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
+//        for (String word : words) {
+//            context.write(new Text(word), new IntWritable(1));
+//        }
     }
 }
