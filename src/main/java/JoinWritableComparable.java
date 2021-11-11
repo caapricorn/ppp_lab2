@@ -6,4 +6,9 @@ import java.io.IOException;
 public class JoinWritableComparable implements WritableComparable<JoinWritableComparable>{
     private int airportId;
     private boolean indicator;
+
+    JoinWritableComparable(int airportId, boolean indicator) {
+        this.airportId = airportId;
+        this.indicator = indicator;
+    }
 }
