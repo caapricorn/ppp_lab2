@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Text{
     @Override
-    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws
+    protected void reduce(JoinWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         long count=0;
         Iterator iter = values.iterator();
