@@ -12,11 +12,13 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         float sum = 0;
         float max = Float.MIN_VALUE;
         float min = Float.MAX_VALUE;
+        float count = 0;
         while(iter.hasNext()) {
             float delay = Float.parseFloat(iter.next().toString());
             max = Math.max(max, delay);
             min = Math.min(min, delay);
             sum += delay;
+            count++;
         }
         context.write(
                 airport_name,
