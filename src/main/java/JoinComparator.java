@@ -7,5 +7,7 @@ public class JoinComparator extends WritableComparator {
     }
 
     @Override
-    
+    public int compare(WritableComparable a, WritableComparable b) {
+        
+    }
 }
