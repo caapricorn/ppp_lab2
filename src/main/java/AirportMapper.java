@@ -14,7 +14,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, IntWritable>
             //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
 
             context.write(
-                    new Text(word), new IntWritable(1));
+                    new JoinWritableComparable(airport), new IntWritable(1));
         }
     }
 }
