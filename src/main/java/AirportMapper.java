@@ -11,8 +11,6 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinWritableCompar
         if (key.get() > 0) {
             String line = value.toString();
             Airport airport = Airport.parse(line);
-            //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
-
             context.write(
                     new JoinWritableComparable(airport.getCode(), false),
                     new Text(airport.getDescription())
