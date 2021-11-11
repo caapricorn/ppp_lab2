@@ -25,8 +25,10 @@ public class Airport {
 
     public static Airport parse(String csv) {
     int count = 0;
-    String [] list;
+    String[] list = new String[2];
     count = csv.indexOf(",");
+    list[0] = csv.substring(0, count).replaceAll();
+    list[1] = csv.substring(count + 1);
     }
 
 //    @Override
