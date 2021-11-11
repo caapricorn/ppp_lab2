@@ -1,6 +1,6 @@
 public class Airport {
-    private int code;
-    private String description;
+    private final int code;
+    private final String description;
 
     Airport(int code, String description) {
         this.code = code;
