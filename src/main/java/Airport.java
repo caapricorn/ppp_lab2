@@ -11,17 +11,9 @@ public class Airport {
         return code;
     }
 
-//    public void setCode(int code) {
-//        this.code = code;
-//    }
-
     public String getDescription() {
         return description;
     }
-
-//   // public void setDescription(String description) {
-//        this.description = description;
-//    }
 
     public static Airport parse(String csv) {
     int count = 0;
