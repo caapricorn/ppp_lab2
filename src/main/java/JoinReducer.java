@@ -9,10 +9,10 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text airport_name = new Text("Airport name: " + iter.next().toString());
-        float sum = 0;
+        float sum = 0.0f;
         float max = Float.MIN_VALUE;
         float min = Float.MAX_VALUE;
-        float count = 0;
+        float count = 0.0f;
         while(iter.hasNext()) {
             float delay = Float.parseFloat(iter.next().toString());
             max = Math.max(max, delay);
