@@ -50,7 +50,9 @@ public class Flight {
         csv = csv.substring(count + 1);
         count = csv.indexOf(",");
         list[2] = csv.substring(0, count);
-        return new Flight(Integer.parseInt(list[0]), )
+        if (list[1].length() == 0) list[1] = "0";
+        if (list[2].length() == 0) list[2] = "0";
+        return new Flight(Integer.parseInt(list[0]), Float.parseFloat(list[1]), Float.parseFloat(list[2]));
     }
 
 //    @Override
