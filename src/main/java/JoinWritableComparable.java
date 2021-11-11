@@ -11,4 +11,14 @@ public class JoinWritableComparable implements WritableComparable<JoinWritableCo
         this.airportId = airportId;
         this.indicator = indicator;
     }
+
+    public int getAirportId() {
+        return airportId;
+    }
+
+    public boolean getIndicator() {
+        return indicator;
+    }
+
+    
 }
