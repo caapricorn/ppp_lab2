@@ -10,6 +10,6 @@ public class JoinComparator extends WritableComparator {
     public int compare(WritableComparable a, WritableComparable b) {
         JoinWritableComparable o1 = (JoinWritableComparable) a;
         JoinWritableComparable o2 = (JoinWritableComparable) b;
-        return 
+        return o1.getAirportId() - o2.getAirportId();
     }
 }
