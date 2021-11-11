@@ -4,5 +4,6 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class JoinWritableComparable implements WritableComparable<JoinWritableComparable>{
-    private int airpo
+    private int airportId;
+    private boolean indicator;
 }
