@@ -19,8 +19,8 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
             sum += delay;
         }
         context.write(
-                key,
-                new LongWritable(count)
+                airport_name,
+                new Text()
         );
     }
 }
