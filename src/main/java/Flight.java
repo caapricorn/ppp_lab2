@@ -1,12 +1,10 @@
 public class Flight {
     private int DEST_AEROPORT_ID;
     private double ARR_DELAY;
-    //private double ARR_DELAY_NEW;
 
     Flight(int DEST_AEROPORT_ID, double ARR_DELAY) {
         this.DEST_AEROPORT_ID = DEST_AEROPORT_ID;
         this.ARR_DELAY = ARR_DELAY;
-       // this.ARR_DELAY_NEW = ARR_DELAY_NEW;
     }
 
     public int getDEST_AEROPORT_ID() {
@@ -23,14 +21,6 @@ public class Flight {
 
     //public void setARR_DELAY(double ARR_DELAY) {
     //    this.ARR_DELAY = ARR_DELAY;
-    //}
-
-    //public double getARR_DELAY_NEW() {
-    //    return ARR_DELAY_NEW;
-    //}
-
-    //public void setARR_DELAY_NEW(double ARR_DELAY_NEW) {
-    //    this.ARR_DELAY_NEW = ARR_DELAY_NEW;
     //}
 
     public static Flight parse(String csv) {
