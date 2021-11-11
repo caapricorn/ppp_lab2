@@ -32,4 +32,8 @@ public class JoinWritableComparable implements WritableComparable<JoinWritableCo
         output.writeBoolean(indicator);
     }
 
+    @Override
+    public int compareTo(JoinWritableComparable a) {
+        
+    }
 }
