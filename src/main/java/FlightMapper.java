@@ -8,11 +8,11 @@ public class FlightMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
-        String line = value.toString();
-        Flight flight = Flight.parse(line);
-        //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
-//        for (String word : words) {
-//            context.write(new Text(word), new IntWritable(1));
-//        }
+        if (key.get() > 0) {
+            String line = value.toString();
+            Flight flight = Flight.parse(line);
+            //String[] words = line.split("[\\p{Punct}\\p{Space}—]");
+            context.write(new Text(word), new IntWritable(1));
+        }
     }
 }
