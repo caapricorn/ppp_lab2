@@ -3,7 +3,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Text{
+public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Text> {
     @Override
     protected void reduce(JoinWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
@@ -23,7 +23,8 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         context.write(
                 airport_name,
                 new Text("Average: " + sum / count +
-                        )
+                        "Min: " + Float.toString(min) +
+                        "Max: " + Float.toString(max))
         );
     }
 }
