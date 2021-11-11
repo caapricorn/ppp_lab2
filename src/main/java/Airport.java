@@ -31,9 +31,4 @@ public class Airport {
     list[1] = csv.substring(count + 1).replaceAll("\"", "");
     return new Airport(Integer.parseInt(list[0]), list[1]);
     }
-
-//    @Override
-//    public String toString() {
-//        return "\nCode=" + getCode() + "::Description=" + getDescription();
-//    }
 }
