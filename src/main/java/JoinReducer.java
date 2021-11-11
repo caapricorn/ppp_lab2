@@ -11,9 +11,11 @@ public class JoinReducer extends Reducer<JoinWritableComparable, Text, Text, Tex
         Iterator<Text> iter = values.iterator();
         Text airport_name = new Text("Airport name: " + iter.next().toString());
         float sum = 0;
+        float max = Float.MIN_VALUE;
+        float min = Float.MAX_VALUE;
         while(iter.hasNext()) {
-            iter.next();
-            count++;
+            float delay = Float.parseFloat(iter.next().toString());
+            
         }
         context.write(key, new LongWritable(count));
     }
