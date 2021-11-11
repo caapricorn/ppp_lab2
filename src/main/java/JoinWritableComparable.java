@@ -3,5 +3,6 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class JoinWritableComparable {
+public class JoinWritableComparable extends WritableComparable<JoinWritableComparable>{
+
 }
