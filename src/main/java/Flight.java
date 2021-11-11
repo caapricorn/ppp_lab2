@@ -50,6 +50,7 @@ public class Flight {
         csv = csv.substring(count + 1);
         count = csv.indexOf(",");
         list[2] = csv.substring(0, count);
+        return new Flight(Integer.parseInt(list[0]), )
     }
 
 //    @Override
