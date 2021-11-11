@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/
 stop-dfs.sh
 stop-yarn.sh
 sudo /etc/init.d/ssh restart
