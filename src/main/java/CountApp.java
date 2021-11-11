@@ -17,7 +17,8 @@ public class CountApp {
         job.setJarByClass(CountApp.class);
         job.setJobName("Count App");
 
-        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class);
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FlightMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         //job.setMapperClass(WordMapper.class);
