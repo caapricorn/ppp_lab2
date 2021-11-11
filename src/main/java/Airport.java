@@ -29,6 +29,7 @@ public class Airport {
     count = csv.indexOf(",");
     list[0] = csv.substring(0, count).replaceAll("\"", "");
     list[1] = csv.substring(count + 1).replaceAll("\"", "");
+    return new Airport(Integer.parseInt(list[0]), list[1]);
     }
 
 //    @Override
